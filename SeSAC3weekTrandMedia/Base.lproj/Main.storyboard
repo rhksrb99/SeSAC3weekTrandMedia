@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="OHf-GQ-KdW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OHf-GQ-KdW" secondAttribute="height" multiplier="1:0.8" id="guM-FP-v8c"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="dateValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tuD-g8-N7N"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-Hd-FOI">
+                                <rect key="frame" x="20" y="395" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BDJ-f5-rd9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1v-AO-4kj">
+                                <rect key="frame" x="20" y="445" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="58b-CX-U5U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luY-J7-aFy">
+                                <rect key="frame" x="20" y="541" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Atu-xe-xPW"/>
+                                    <constraint firstAttribute="height" constant="100" id="eNr-sl-aIT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-uP-xCt">
+                                <rect key="frame" x="40" y="561" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="luY-J7-aFy" firstAttribute="top" secondItem="q1v-AO-4kj" secondAttribute="bottom" constant="66" id="2c1-eS-fg9"/>
+                            <constraint firstItem="3ah-uP-xCt" firstAttribute="width" secondItem="luY-J7-aFy" secondAttribute="width" id="2gd-qF-I9o"/>
+                            <constraint firstItem="luY-J7-aFy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6lh-pk-9a0"/>
+                            <constraint firstItem="gmf-Hd-FOI" firstAttribute="top" secondItem="OHf-GQ-KdW" secondAttribute="bottom" constant="20" id="8mI-dK-aE8"/>
+                            <constraint firstItem="3ah-uP-xCt" firstAttribute="leading" secondItem="luY-J7-aFy" secondAttribute="leading" constant="20" id="9lV-0m-09Z"/>
+                            <constraint firstItem="OHf-GQ-KdW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FKA-Dj-PBh"/>
+                            <constraint firstItem="OHf-GQ-KdW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IcF-ge-iUS"/>
+                            <constraint firstItem="3ah-uP-xCt" firstAttribute="height" secondItem="luY-J7-aFy" secondAttribute="height" id="Nen-Ge-LPC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q1v-AO-4kj" secondAttribute="trailing" constant="20" id="QP0-2J-0DJ"/>
+                            <constraint firstItem="gmf-Hd-FOI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RAq-k9-kum"/>
+                            <constraint firstItem="3ah-uP-xCt" firstAttribute="top" secondItem="luY-J7-aFy" secondAttribute="top" constant="20" id="W9o-bQ-NaD"/>
+                            <constraint firstItem="q1v-AO-4kj" firstAttribute="top" secondItem="gmf-Hd-FOI" secondAttribute="bottom" constant="20" id="chB-sh-DZ6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gmf-Hd-FOI" secondAttribute="trailing" constant="20" id="elg-Wm-8Pt"/>
+                            <constraint firstItem="OHf-GQ-KdW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sVi-Fl-0AI"/>
+                            <constraint firstItem="q1v-AO-4kj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="srM-EE-Khj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SecondViewLeadingConstraint" destination="9lV-0m-09Z" id="MLc-94-OAf"/>
+                        <outlet property="dateLabel" destination="gmf-Hd-FOI" id="OUR-8i-CMg"/>
+                        <outlet property="dateLabel2" destination="q1v-AO-4kj" id="Lg0-Ln-ytC"/>
+                        <outlet property="datePicker" destination="OHf-GQ-KdW" id="bJP-Xl-YY7"/>
+                        <outletCollection property="dateLabelCollection" destination="gmf-Hd-FOI" collectionClass="NSMutableArray" id="CSc-cl-GvE"/>
+                        <outletCollection property="dateLabelCollection" destination="q1v-AO-4kj" collectionClass="NSMutableArray" id="FCZ-e3-pJ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
