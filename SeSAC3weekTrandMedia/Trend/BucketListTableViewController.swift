@@ -54,7 +54,7 @@ class BucketListTableViewController: UITableViewController {
         return true
     }
     
-    // 우측 스와이프 디폴트 기능: commit deitingStyle
+    // 우측 스와이프 디폴트 기능: commit editingStyle
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             // 배열 삭제 후 테이블 뷰 리로드
