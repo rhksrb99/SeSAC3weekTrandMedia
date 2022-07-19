@@ -18,9 +18,28 @@ class ShoppingTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.rowHeight = 60
+        btnDesign()
+        tfDesign()
+        
 
     }
     
+    // MARK: - designFunctions
+    func btnDesign() {
+        btn_search.setTitle("추가", for: .normal)
+        btn_search.setTitleColor(.white, for: .normal)
+        btn_search.backgroundColor = .darkGray
+        
+    }
+    
+    func tfDesign() {
+        tf_search.placeholder = "무엇을 구매하실 건가요?"
+        tf_search.backgroundColor = .lightGray
+    }
+    
+    
+    
+    // MARK: - TableViewController Setting
     @IBAction func btn_searchClicked(_ sender: UIButton) {
         // 입력받은 값을 배열에 추가
         shoppingList.append(tf_search.text!)
@@ -40,6 +59,10 @@ class ShoppingTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as! ShoppingTableViewCell // 타입 캐스팅
         cell.lb_list.text = shoppingList[indexPath.row]
         cell.lb_list.font = .boldSystemFont(ofSize: 20)
+        
+        cell.backgroundColor = .lightGray
+        cell.btn_like.tintColor = .black
+        cell.checkBoxImageView.tintColor = .black
         
         return cell
     }
