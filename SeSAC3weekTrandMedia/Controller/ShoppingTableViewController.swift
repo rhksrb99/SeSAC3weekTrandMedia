@@ -35,6 +35,7 @@ class ShoppingTableViewController: UITableViewController {
     func tfDesign() {
         tf_search.placeholder = "무엇을 구매하실 건가요?"
         tf_search.backgroundColor = .lightGray
+        tf_search.layer.cornerRadius = 8
     }
     
     
@@ -58,11 +59,15 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as! ShoppingTableViewCell // 타입 캐스팅
         cell.lb_list.text = shoppingList[indexPath.row]
-        cell.lb_list.font = .boldSystemFont(ofSize: 20)
         
+        
+        
+        
+        cell.lb_list.font = .boldSystemFont(ofSize: 20)
         cell.backgroundColor = .lightGray
         cell.btn_like.tintColor = .black
         cell.checkBoxImageView.tintColor = .black
+        cell.layer.cornerRadius = 8
         
         return cell
     }

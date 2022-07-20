@@ -30,6 +30,19 @@
 		92EF7FF928868B1D00E86749 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF7FF828868B1D00E86749 /* ShoppingTableViewCell.swift */; };
 		92EF7FFB28868B5F00E86749 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF7FFA28868B5F00E86749 /* ShoppingTableViewController.swift */; };
 		92EF7FFD28868C8A00E86749 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EF7FFC28868C8A00E86749 /* Shopping.storyboard */; };
+		92EF80022887875100E86749 /* SearchMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80012887875100E86749 /* SearchMovieTableViewController.swift */; };
+		92EF80042887877F00E86749 /* SearchMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80032887877F00E86749 /* SearchMovieTableViewCell.swift */; };
+		92EF800628878CAE00E86749 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF800528878CAE00E86749 /* Movie.swift */; };
+		92EF80082887953400E86749 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80072887953400E86749 /* MovieInfo.swift */; };
+		92EF800A28879AB700E86749 /* RecommandCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF800928879AB700E86749 /* RecommandCollectionViewController.swift */; };
+		92EF800C28879DFF00E86749 /* RecommandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF800B28879DFF00E86749 /* RecommandCollectionViewCell.swift */; };
+		92EF800F2887AE5900E86749 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 92EF800E2887AE5900E86749 /* Kingfisher */; };
+		92EF80122887AE7800E86749 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 92EF80112887AE7800E86749 /* Toast */; };
+		92EF80142887D34000E86749 /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EF80132887D34000E86749 /* Book.storyboard */; };
+		92EF80162887D3FF00E86749 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80152887D3FF00E86749 /* BookCollectionViewCell.swift */; };
+		92EF80182887D5BB00E86749 /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */; };
+		92EF801A2887D90F00E86749 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80192887D90F00E86749 /* Book.swift */; };
+		92EF801C2887DA0300E86749 /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF801B2887DA0300E86749 /* BookInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +71,17 @@
 		92EF7FF828868B1D00E86749 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		92EF7FFA28868B5F00E86749 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		92EF7FFC28868C8A00E86749 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		92EF80012887875100E86749 /* SearchMovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchMovieTableViewController.swift; path = SeSAC3weekTrandMedia/StoryBoard/SearchMovieTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		92EF80032887877F00E86749 /* SearchMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchMovieTableViewCell.swift; path = SeSAC3weekTrandMedia/StoryBoard/SearchMovieTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		92EF800528878CAE00E86749 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = SOURCE_ROOT; };
+		92EF80072887953400E86749 /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		92EF800928879AB700E86749 /* RecommandCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		92EF800B28879DFF00E86749 /* RecommandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommandCollectionViewCell.swift; path = SeSAC3weekTrandMedia/StoryBoard/RecommandCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		92EF80132887D34000E86749 /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
+		92EF80152887D3FF00E86749 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookCollectionViewCell.swift; path = SeSAC3weekTrandMedia/StoryBoard/BookCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookCollectionViewController.swift; path = SeSAC3weekTrandMedia/StoryBoard/BookCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		92EF80192887D90F00E86749 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		92EF801B2887DA0300E86749 /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EF80122887AE7800E86749 /* Toast in Frameworks */,
+				92EF800F2887AE5900E86749 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +116,12 @@
 		9268921E2884DDC900E88995 /* SeSAC3weekTrandMedia */ = {
 			isa = PBXGroup;
 			children = (
-				92EF7FF02886479B00E86749 /* Trend */,
+				92EF800528878CAE00E86749 /* Movie.swift */,
+				92EF80192887D90F00E86749 /* Book.swift */,
+				92EF800028877F6B00E86749 /* Extension */,
+				92EF7FFF28877F4500E86749 /* Controller */,
+				92EF7FFE28877F2C00E86749 /* StoryBoard */,
+				92EF7FF02886479B00E86749 /* Cell */,
 				9268921F2884DDC900E88995 /* AppDelegate.swift */,
 				926892212884DDC900E88995 /* SceneDelegate.swift */,
 				926892232884DDC900E88995 /* ViewController.swift */,
@@ -99,23 +130,44 @@
 				926892282884DDCB00E88995 /* Assets.xcassets */,
 				9268922A2884DDCB00E88995 /* LaunchScreen.storyboard */,
 				9268922D2884DDCB00E88995 /* Info.plist */,
+				92EF80072887953400E86749 /* MovieInfo.swift */,
+				92EF801B2887DA0300E86749 /* BookInfo.swift */,
 			);
 			path = SeSAC3weekTrandMedia;
 			sourceTree = "<group>";
 		};
-		92EF7FF02886479B00E86749 /* Trend */ = {
+		92EF7FF02886479B00E86749 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				92EF7FEC2886452E00E86749 /* UIViewController+Extension.swift */,
-				92EF7FF22886486E00E86749 /* UITextField+Extension.swift */,
+				92EF80152887D3FF00E86749 /* BookCollectionViewCell.swift */,
+				92EF800B28879DFF00E86749 /* RecommandCollectionViewCell.swift */,
+				92EF80032887877F00E86749 /* SearchMovieTableViewCell.swift */,
+				92EF7FF828868B1D00E86749 /* ShoppingTableViewCell.swift */,
+				92EF7FF628864D9C00E86749 /* BucketListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		92EF7FFE28877F2C00E86749 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
 				92EF7FE62886407400E86749 /* Intro.storyboard */,
 				92EF7FDA28850FD400E86749 /* Setting.storyboard */,
 				92EF7FE22886401300E86749 /* Search.storyboard */,
+				92EF80132887D34000E86749 /* Book.storyboard */,
 				92EF7FE42886403F00E86749 /* Trend.storyboard */,
 				92EF7FFC28868C8A00E86749 /* Shopping.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		92EF7FFF28877F4500E86749 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */,
+				92EF800928879AB700E86749 /* RecommandCollectionViewController.swift */,
+				92EF80012887875100E86749 /* SearchMovieTableViewController.swift */,
 				92EF7FFA28868B5F00E86749 /* ShoppingTableViewController.swift */,
-				92EF7FF828868B1D00E86749 /* ShoppingTableViewCell.swift */,
-				92EF7FF628864D9C00E86749 /* BucketListTableViewCell.swift */,
 				92EF7FF428864B9800E86749 /* BucketListTableViewController.swift */,
 				92EF7FE0288526D600E86749 /* KakaoSettingTableViewController.swift */,
 				92EF7FD82884FE3B00E86749 /* SettingTableViewController.swift */,
@@ -123,7 +175,16 @@
 				92EF7FEA2886440F00E86749 /* SearchViewController.swift */,
 				92EF7FDE288526CD00E86749 /* PersonalTimeTableViewController.swift */,
 			);
-			path = Trend;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92EF800028877F6B00E86749 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92EF7FEC2886452E00E86749 /* UIViewController+Extension.swift */,
+				92EF7FF22886486E00E86749 /* UITextField+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +203,10 @@
 			dependencies = (
 			);
 			name = SeSAC3weekTrandMedia;
+			packageProductDependencies = (
+				92EF800E2887AE5900E86749 /* Kingfisher */,
+				92EF80112887AE7800E86749 /* Toast */,
+			);
 			productName = SeSAC3weekTrandMedia;
 			productReference = 9268921C2884DDC900E88995 /* SeSAC3weekTrandMedia.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +235,10 @@
 				Base,
 			);
 			mainGroup = 926892132884DDC900E88995;
+			packageReferences = (
+				92EF800D2887AE5900E86749 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				92EF80102887AE7800E86749 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = 9268921D2884DDC900E88995 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,6 +256,7 @@
 				92EF7FE52886403F00E86749 /* Trend.storyboard in Resources */,
 				9268922C2884DDCB00E88995 /* LaunchScreen.storyboard in Resources */,
 				926892292884DDCB00E88995 /* Assets.xcassets in Resources */,
+				92EF80142887D34000E86749 /* Book.storyboard in Resources */,
 				92EF7FE72886407400E86749 /* Intro.storyboard in Resources */,
 				92EF7FDB28850FD400E86749 /* Setting.storyboard in Resources */,
 				926892272884DDC900E88995 /* Main.storyboard in Resources */,
@@ -203,20 +273,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EF801C2887DA0300E86749 /* BookInfo.swift in Sources */,
+				92EF800A28879AB700E86749 /* RecommandCollectionViewController.swift in Sources */,
 				92EF7FED2886452E00E86749 /* UIViewController+Extension.swift in Sources */,
 				92EF7FF928868B1D00E86749 /* ShoppingTableViewCell.swift in Sources */,
+				92EF800C28879DFF00E86749 /* RecommandCollectionViewCell.swift in Sources */,
+				92EF80042887877F00E86749 /* SearchMovieTableViewCell.swift in Sources */,
+				92EF80182887D5BB00E86749 /* BookCollectionViewController.swift in Sources */,
 				92EF7FD92884FE3B00E86749 /* SettingTableViewController.swift in Sources */,
 				926892242884DDC900E88995 /* ViewController.swift in Sources */,
+				92EF801A2887D90F00E86749 /* Book.swift in Sources */,
 				92EF7FEB2886440F00E86749 /* SearchViewController.swift in Sources */,
 				92EF7FDF288526CD00E86749 /* PersonalTimeTableViewController.swift in Sources */,
 				92EF7FF32886486E00E86749 /* UITextField+Extension.swift in Sources */,
 				926892202884DDC900E88995 /* AppDelegate.swift in Sources */,
 				92EF7FE92886440500E86749 /* TrendViewController.swift in Sources */,
+				92EF80082887953400E86749 /* MovieInfo.swift in Sources */,
 				92EF7FE1288526D600E86749 /* KakaoSettingTableViewController.swift in Sources */,
 				92EF7FF728864D9C00E86749 /* BucketListTableViewCell.swift in Sources */,
 				926892222884DDC900E88995 /* SceneDelegate.swift in Sources */,
 				92EF7FF528864B9800E86749 /* BucketListTableViewController.swift in Sources */,
 				92EF7FFB28868B5F00E86749 /* ShoppingTableViewController.swift in Sources */,
+				92EF80162887D3FF00E86749 /* BookCollectionViewCell.swift in Sources */,
+				92EF80022887875100E86749 /* SearchMovieTableViewController.swift in Sources */,
+				92EF800628878CAE00E86749 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +514,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92EF800D2887AE5900E86749 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		92EF80102887AE7800E86749 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92EF800E2887AE5900E86749 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92EF800D2887AE5900E86749 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		92EF80112887AE7800E86749 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92EF80102887AE7800E86749 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 926892142884DDC900E88995 /* Project object */;
 }

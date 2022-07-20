@@ -13,4 +13,6 @@ class ShoppingTableViewCell: UITableViewCell {
     @IBOutlet weak var lb_list: UILabel!
     @IBOutlet weak var btn_like: UIButton!
     
+    
 }
+
