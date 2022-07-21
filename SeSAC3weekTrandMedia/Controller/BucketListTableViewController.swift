@@ -9,24 +9,58 @@ import UIKit
 
 class BucketListTableViewController: UITableViewController {
 
+    static let identifier = "BucketListTableViewController"
+    
     @IBOutlet weak var tf_top: UITextField!
     
-    var list = ["탑건:메버릭", "울버린", "짱구는못말려"]
+    var list = ["탑건:메버릭", "울버린", "짱구는못말려", "명탐정코난"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "버킷리스트"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(btn_closeClicked))
+        
         tableView.rowHeight = 80
         
         list.append("토르")
     }
     
+    @objc func btn_closeClicked() {
+        self.dismiss(animated: true)
+    }
+    
+    
     @IBAction func tf_topClicked(_ sender: UITextField) {
         
+        // case 2. if-let 사용
+        
+        // sender에 텍스트가 있다면 value에 넣어주고     공백을 지우는 방법                      value가 빈 값이 아닌지     value가 2~6글자에 있는지
+        if let value = sender.text?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty ,   (2...6).contains(value.count){
+            // 있다면 list에 value를 넣어주고
+            list.append(value)
+            // tableView에 새로고침!
+            tableView.reloadData()
+        }else {
+            // 토스트 메시지 띄우기
+        }
+        
+        // case 3. guard let 사용
+        guard let value = sender.text?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty, (2...6).contains(value.count) else {
+            // Alert 혹은 Toast를 사용하여 사용자에게 알려주는게 좋다. 경고, 안내 등
+            return
+        }
+        // guard let의 조건에 충족하면 아래의 코드 실행
+        list.append(value)
+        tableView.reloadData()
+        
+        
+        // case 1.
         // 입력된 텍스트를 sender를 통해 받아오며 list에 추가
-        list.append(sender.text!)
+//        list.append(sender.text!)
         
         // 중요한 포인트 -> 데이터가 추가가 되면 테이블을 다시 그려주는 코드
-        tableView.reloadData()
+//        tableView.reloadData()
         // 특정 섹션만 리로드 하고싶을 때
         tableView.reloadSections(IndexSet(), with: .fade)
         // 특정 로우만 리로드 하고싶을 때
@@ -41,7 +75,7 @@ class BucketListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BucketListTableViewCell", for: indexPath) as! BucketListTableViewCell // as? 타입 캐스팅
+        let cell = tableView.dequeueReusableCell(withIdentifier: BucketListTableViewCell.identifier, for: indexPath) as! BucketListTableViewCell // as? 타입 캐스팅
         
         cell.lb_bucketList.text = list[indexPath.row]
         cell.lb_bucketList.font = .boldSystemFont(ofSize: 20)

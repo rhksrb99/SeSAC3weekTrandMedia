@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E4l-vh-pfI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LCh-yC-Fu0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -30,7 +30,7 @@
         <!--Search Movie Table View Controller-->
         <scene sceneID="pxN-2P-HYk">
             <objects>
-                <tableViewController id="sra-FF-o63" customClass="SearchMovieTableViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchMovieTableViewController" id="sra-FF-o63" customClass="SearchMovieTableViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dU1-cr-rFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,15 +103,16 @@
                             <outlet property="delegate" destination="sra-FF-o63" id="w1N-en-Se9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="idI-Ua-XAP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlq-SI-2Mz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="110"/>
+            <point key="canvasLocation" x="429" y="785"/>
         </scene>
         <!--Recommand Collection View Controller-->
         <scene sceneID="YQr-AD-NQF">
             <objects>
-                <collectionViewController id="E4l-vh-pfI" customClass="RecommandCollectionViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="RecommandCollectionViewController" id="E4l-vh-pfI" customClass="RecommandCollectionViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BJ3-Ap-UHg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +124,7 @@
                             <inset key="sectionInset" minX="50" minY="50" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommandCollectionViewCell" id="1jE-Qb-7Rm" customClass="RecommandCollectionViewCell" customModule="SeSAC3weekTrandMedia" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="RecommandCollectionViewCell" reuseIdentifier="RecommandCollectionViewCell" id="1jE-Qb-7Rm" customClass="RecommandCollectionViewCell" customModule="SeSAC3weekTrandMedia" customModuleProvider="target">
                                 <rect key="frame" x="50" y="50" width="144" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="egh-sA-f0H">
@@ -155,7 +156,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rli-1u-2TZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2369.5652173913045" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1326" y="785"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mp9-WK-3ET">
@@ -174,6 +175,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVv-4o-i66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WRa-RI-M0u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LCh-yC-Fu0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fnv-cx-jJY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sra-FF-o63" kind="relationship" relationship="rootViewController" id="IqO-5R-xyb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4C9-kJ-Bnr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481" y="785"/>
         </scene>
     </scenes>
     <resources>

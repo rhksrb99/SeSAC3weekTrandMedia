@@ -15,7 +15,9 @@ import Kingfisher
  heightForRowAt -> ??? FlowLayout (heightForItemAt이 없는 이유)
  */
 
+
 class RecommandCollectionViewController: UICollectionViewController {
+    static let identifier = "RecommandCollectionViewController"
 
     var image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnwfa7h49F5970bxJrruhRZeQUePhDqK7aw&usqp=CAU"
     
@@ -45,7 +47,11 @@ class RecommandCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandCollectionViewCell", for: indexPath) as! RecommandCollectionViewCell
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandCollectionViewCell", for: indexPath) as? RecommandCollectionViewCell else{
+                // 비어있는 인스턴스를 반환
+            return UICollectionViewCell()
+        }
         
         let url = URL(string: image)
         cell.posterImageView.kf.setImage(with: url)
@@ -57,6 +63,8 @@ class RecommandCollectionViewController: UICollectionViewController {
     // 셀 선택 시 이벤트를 주는 함수 : didSelectItemAt
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         view.makeToast("\(indexPath.item)번째 셀을 선택했습니다.", duration: 3, position: .center)
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
     

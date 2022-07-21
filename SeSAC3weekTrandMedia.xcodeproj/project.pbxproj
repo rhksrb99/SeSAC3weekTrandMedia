@@ -43,6 +43,8 @@
 		92EF80182887D5BB00E86749 /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */; };
 		92EF801A2887D90F00E86749 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80192887D90F00E86749 /* Book.swift */; };
 		92EF801C2887DA0300E86749 /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF801B2887DA0300E86749 /* BookInfo.swift */; };
+		92EF801E2888E75600E86749 /* TrendSubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF801D2888E75600E86749 /* TrendSubTableViewController.swift */; };
+		92EF80202888E77300E86749 /* TrendSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF801F2888E77300E86749 /* TrendSubTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookCollectionViewController.swift; path = SeSAC3weekTrandMedia/StoryBoard/BookCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		92EF80192887D90F00E86749 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		92EF801B2887DA0300E86749 /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
+		92EF801D2888E75600E86749 /* TrendSubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendSubTableViewController.swift; path = SeSAC3weekTrandMedia/Controller/TrendSubTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		92EF801F2888E77300E86749 /* TrendSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendSubTableViewCell.swift; path = SeSAC3weekTrandMedia/StoryBoard/TrendSubTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		92EF7FF02886479B00E86749 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				92EF801F2888E77300E86749 /* TrendSubTableViewCell.swift */,
 				92EF80152887D3FF00E86749 /* BookCollectionViewCell.swift */,
 				92EF800B28879DFF00E86749 /* RecommandCollectionViewCell.swift */,
 				92EF80032887877F00E86749 /* SearchMovieTableViewCell.swift */,
@@ -171,9 +176,10 @@
 				92EF7FF428864B9800E86749 /* BucketListTableViewController.swift */,
 				92EF7FE0288526D600E86749 /* KakaoSettingTableViewController.swift */,
 				92EF7FD82884FE3B00E86749 /* SettingTableViewController.swift */,
-				92EF7FE82886440500E86749 /* TrendViewController.swift */,
 				92EF7FEA2886440F00E86749 /* SearchViewController.swift */,
 				92EF7FDE288526CD00E86749 /* PersonalTimeTableViewController.swift */,
+				92EF7FE82886440500E86749 /* TrendViewController.swift */,
+				92EF801D2888E75600E86749 /* TrendSubTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EF80202888E77300E86749 /* TrendSubTableViewCell.swift in Sources */,
 				92EF801C2887DA0300E86749 /* BookInfo.swift in Sources */,
 				92EF800A28879AB700E86749 /* RecommandCollectionViewController.swift in Sources */,
 				92EF7FED2886452E00E86749 /* UIViewController+Extension.swift in Sources */,
@@ -281,6 +288,7 @@
 				92EF80042887877F00E86749 /* SearchMovieTableViewCell.swift in Sources */,
 				92EF80182887D5BB00E86749 /* BookCollectionViewController.swift in Sources */,
 				92EF7FD92884FE3B00E86749 /* SettingTableViewController.swift in Sources */,
+				92EF801E2888E75600E86749 /* TrendSubTableViewController.swift in Sources */,
 				926892242884DDC900E88995 /* ViewController.swift in Sources */,
 				92EF801A2887D90F00E86749 /* Book.swift in Sources */,
 				92EF7FEB2886440F00E86749 /* SearchViewController.swift in Sources */,
@@ -448,7 +456,7 @@
 				INFOPLIST_FILE = SeSAC3weekTrandMedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Shopping;
+				INFOPLIST_KEY_UIMainStoryboardFile = Trend;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +484,7 @@
 				INFOPLIST_FILE = SeSAC3weekTrandMedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Shopping;
+				INFOPLIST_KEY_UIMainStoryboardFile = Trend;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -36,6 +36,19 @@ class SearchMovieTableViewController: UITableViewController {
         return UIScreen.main.bounds.height / 8
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("didSelectRowAt")
+        
+        let sb = UIStoryboard(name: "Search", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: RecommandCollectionViewController.identifier) as! RecommandCollectionViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("didSelectRowAt second")
+        
+        
+    }
+    
     
 
 }
