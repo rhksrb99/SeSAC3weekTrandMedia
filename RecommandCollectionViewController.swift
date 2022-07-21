@@ -62,9 +62,25 @@ class RecommandCollectionViewController: UICollectionViewController {
     
     // 셀 선택 시 이벤트를 주는 함수 : didSelectItemAt
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        view.makeToast("\(indexPath.item)번째 셀을 선택했습니다.", duration: 3, position: .center)
+        view.makeToast("\(indexPath.item)번째 셀을 선택했습니다.", duration: 3, position: .bottom)
         
-        self.navigationController?.popViewController(animated: true)
+        let storyboard = UIStoryboard(name: "Search", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "RecommandCellInfoViewController") as! RecommandCellInfoViewController
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+//        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    
+    @IBAction func barbtn_search(_ sender: UIBarButtonItem) {
+        print("barbtn Clicked")
+        let storyboard = UIStoryboard(name: "Search", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "RecommandSearchViewController") as! RecommandSearchViewController
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
         
     }
     

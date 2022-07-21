@@ -45,6 +45,9 @@
 		92EF801C2887DA0300E86749 /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF801B2887DA0300E86749 /* BookInfo.swift */; };
 		92EF801E2888E75600E86749 /* TrendSubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF801D2888E75600E86749 /* TrendSubTableViewController.swift */; };
 		92EF80202888E77300E86749 /* TrendSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF801F2888E77300E86749 /* TrendSubTableViewCell.swift */; };
+		92EF80462889319600E86749 /* RecommandSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80452889319600E86749 /* RecommandSearchViewController.swift */; };
+		92EF8048288931A900E86749 /* RecommandCellInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF8047288931A900E86749 /* RecommandCellInfoViewController.swift */; };
+		92EF804A288931CA00E86749 /* RecommandWebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF8049288931CA00E86749 /* RecommandWebInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		92EF801B2887DA0300E86749 /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 		92EF801D2888E75600E86749 /* TrendSubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendSubTableViewController.swift; path = SeSAC3weekTrandMedia/Controller/TrendSubTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		92EF801F2888E77300E86749 /* TrendSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendSubTableViewCell.swift; path = SeSAC3weekTrandMedia/StoryBoard/TrendSubTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		92EF80452889319600E86749 /* RecommandSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandSearchViewController.swift; sourceTree = SOURCE_ROOT; };
+		92EF8047288931A900E86749 /* RecommandCellInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandCellInfoViewController.swift; sourceTree = "<group>"; };
+		92EF8049288931CA00E86749 /* RecommandWebInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandWebInfoViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,9 @@
 		92EF7FFF28877F4500E86749 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				92EF8049288931CA00E86749 /* RecommandWebInfoViewController.swift */,
+				92EF80452889319600E86749 /* RecommandSearchViewController.swift */,
+				92EF8047288931A900E86749 /* RecommandCellInfoViewController.swift */,
 				92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */,
 				92EF800928879AB700E86749 /* RecommandCollectionViewController.swift */,
 				92EF80012887875100E86749 /* SearchMovieTableViewController.swift */,
@@ -283,6 +292,8 @@
 				92EF801C2887DA0300E86749 /* BookInfo.swift in Sources */,
 				92EF800A28879AB700E86749 /* RecommandCollectionViewController.swift in Sources */,
 				92EF7FED2886452E00E86749 /* UIViewController+Extension.swift in Sources */,
+				92EF80462889319600E86749 /* RecommandSearchViewController.swift in Sources */,
+				92EF8048288931A900E86749 /* RecommandCellInfoViewController.swift in Sources */,
 				92EF7FF928868B1D00E86749 /* ShoppingTableViewCell.swift in Sources */,
 				92EF800C28879DFF00E86749 /* RecommandCollectionViewCell.swift in Sources */,
 				92EF80042887877F00E86749 /* SearchMovieTableViewCell.swift in Sources */,
@@ -303,6 +314,7 @@
 				92EF7FF528864B9800E86749 /* BucketListTableViewController.swift in Sources */,
 				92EF7FFB28868B5F00E86749 /* ShoppingTableViewController.swift in Sources */,
 				92EF80162887D3FF00E86749 /* BookCollectionViewCell.swift in Sources */,
+				92EF804A288931CA00E86749 /* RecommandWebInfoViewController.swift in Sources */,
 				92EF80022887875100E86749 /* SearchMovieTableViewController.swift in Sources */,
 				92EF800628878CAE00E86749 /* Movie.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LCh-yC-Fu0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PPP-AV-hQI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -145,7 +145,6 @@
                                 <size key="customSize" width="144" height="152"/>
                                 <connections>
                                     <outlet property="posterImageView" destination="Who-Ro-mLt" id="28b-zE-Gao"/>
-                                    <segue destination="5qR-t5-xhU" kind="show" id="I4a-u0-Jba"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -157,7 +156,7 @@
                     <navigationItem key="navigationItem" title="Title" id="TE0-gg-hyX">
                         <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="4TW-PY-WW9">
                             <connections>
-                                <segue destination="y6a-dQ-LnZ" kind="show" id="ar3-Dn-IB1"/>
+                                <action selector="barbtn_search:" destination="E4l-vh-pfI" id="CKN-dK-4FE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -166,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="2234.7826086956525" y="784.82142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Recommand Cell Info View Controller-->
         <scene sceneID="Kgq-PN-m9L">
             <objects>
-                <viewController id="5qR-t5-xhU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommandCellInfoViewController" id="5qR-t5-xhU" customClass="RecommandCellInfoViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q7r-nz-Kwc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,11 +179,11 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="gVf-GG-JbE" kind="show" id="ZLE-4R-j1K"/>
+                                    <action selector="btn_web:" destination="5qR-t5-xhU" eventType="touchUpInside" id="Yox-bG-zom"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="클릭 된 셀의 상세정보 출력 예정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsa-Wl-rAe">
-                                <rect key="frame" x="100.5" y="112" width="213" height="21"/>
+                                <rect key="frame" x="100.5" y="68" width="213" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -201,12 +200,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVg-Cu-rpJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3167" y="1092"/>
+            <point key="canvasLocation" x="3097" y="1092"/>
         </scene>
-        <!--View Controller-->
+        <!--Recommand Web Info View Controller-->
         <scene sceneID="r5I-iM-hj7">
             <objects>
-                <viewController id="gVf-GG-JbE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommandWebInfoViewController" id="gVf-GG-JbE" customClass="RecommandWebInfoViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DXb-Wd-Gz8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,10 +230,10 @@
             </objects>
             <point key="canvasLocation" x="3944.9275362318845" y="1091.5178571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Recommand Search View Controller-->
         <scene sceneID="zdw-Bf-rB2">
             <objects>
-                <viewController id="y6a-dQ-LnZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommandSearchViewController" id="y6a-dQ-LnZ" customClass="RecommandSearchViewController" customModule="SeSAC3weekTrandMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hhq-Gb-CVX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UK-tn-J2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3168" y="407"/>
+            <point key="canvasLocation" x="3097" y="406"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mp9-WK-3ET">
