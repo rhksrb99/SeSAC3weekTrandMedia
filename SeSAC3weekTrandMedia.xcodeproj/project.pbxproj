@@ -48,6 +48,7 @@
 		92EF80462889319600E86749 /* RecommandSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF80452889319600E86749 /* RecommandSearchViewController.swift */; };
 		92EF8048288931A900E86749 /* RecommandCellInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF8047288931A900E86749 /* RecommandCellInfoViewController.swift */; };
 		92EF804A288931CA00E86749 /* RecommandWebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF8049288931CA00E86749 /* RecommandWebInfoViewController.swift */; };
+		92EF804C288A3F9200E86749 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF804B288A3F9200E86749 /* testViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		92EF80452889319600E86749 /* RecommandSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandSearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		92EF8047288931A900E86749 /* RecommandCellInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandCellInfoViewController.swift; sourceTree = "<group>"; };
 		92EF8049288931CA00E86749 /* RecommandWebInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandWebInfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		92EF804B288A3F9200E86749 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,16 +180,17 @@
 				92EF8049288931CA00E86749 /* RecommandWebInfoViewController.swift */,
 				92EF80452889319600E86749 /* RecommandSearchViewController.swift */,
 				92EF8047288931A900E86749 /* RecommandCellInfoViewController.swift */,
-				92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */,
 				92EF800928879AB700E86749 /* RecommandCollectionViewController.swift */,
-				92EF80012887875100E86749 /* SearchMovieTableViewController.swift */,
+				92EF80172887D5BB00E86749 /* BookCollectionViewController.swift */,
 				92EF7FFA28868B5F00E86749 /* ShoppingTableViewController.swift */,
+				92EF80012887875100E86749 /* SearchMovieTableViewController.swift */,
+				92EF7FEA2886440F00E86749 /* SearchViewController.swift */,
 				92EF7FF428864B9800E86749 /* BucketListTableViewController.swift */,
 				92EF7FE0288526D600E86749 /* KakaoSettingTableViewController.swift */,
 				92EF7FD82884FE3B00E86749 /* SettingTableViewController.swift */,
-				92EF7FEA2886440F00E86749 /* SearchViewController.swift */,
 				92EF7FDE288526CD00E86749 /* PersonalTimeTableViewController.swift */,
 				92EF7FE82886440500E86749 /* TrendViewController.swift */,
+				92EF804B288A3F9200E86749 /* testViewController.swift */,
 				92EF801D2888E75600E86749 /* TrendSubTableViewController.swift */,
 			);
 			path = Controller;
@@ -306,6 +309,7 @@
 				92EF7FDF288526CD00E86749 /* PersonalTimeTableViewController.swift in Sources */,
 				92EF7FF32886486E00E86749 /* UITextField+Extension.swift in Sources */,
 				926892202884DDC900E88995 /* AppDelegate.swift in Sources */,
+				92EF804C288A3F9200E86749 /* testViewController.swift in Sources */,
 				92EF7FE92886440500E86749 /* TrendViewController.swift in Sources */,
 				92EF80082887953400E86749 /* MovieInfo.swift in Sources */,
 				92EF7FE1288526D600E86749 /* KakaoSettingTableViewController.swift in Sources */,

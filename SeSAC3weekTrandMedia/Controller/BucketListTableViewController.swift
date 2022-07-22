@@ -11,12 +11,24 @@ class BucketListTableViewController: UITableViewController {
 
     static let identifier = "BucketListTableViewController"
     
+    // 값 전달 1번
+    var textfieldPlaceholder = ""
+    // 옵셔널 스트링 타이븡로 선언하더라도 오류가 뜨지 않는 이유는?
+    // placegolder 자체가 옵셔널이라면? 괜챃다!
+    // 하지만 String Interpolation이라면?
+    // var textfieldPlaceholder: String?
+    
     @IBOutlet weak var tf_top: UITextField!
     
     var list = ["탑건:메버릭", "울버린", "짱구는못말려", "명탐정코난"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // place holder
+        tf_top.text = ""
+        tf_top.placeholder = "\(textfieldPlaceholder)를 입력해보세요."
+        // 만약 textfieldPlaceholder가 없다면? "검색어"를 반환한다.
+        //tf_top.placeholder = "\(textfieldPlaceholder ?? "검색어")를 입력해보세요."
         
         navigationItem.title = "버킷리스트"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(btn_closeClicked))

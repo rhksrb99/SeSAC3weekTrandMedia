@@ -23,6 +23,14 @@ class TrendSubTableViewController: UITableViewController {
         let storyB = UIStoryboard(name: "Trend", bundle: nil)
         // 2번
         let viewCon = storyB.instantiateViewController(withIdentifier: BucketListTableViewController.identifier) as! BucketListTableViewController
+        
+        // 값 전달 2번
+        viewCon.textfieldPlaceholder = "영화"
+        
+        // 버튼의 스타일이 plain일 땐 불가능하지만
+        // 버튼의 title을 가져와서 사용할 수 있다.
+        // viewCon.textfieldPlaceholder = sender.currentTitle
+        
         // 3번
         self.present(viewCon, animated: true)
         
@@ -39,6 +47,9 @@ class TrendSubTableViewController: UITableViewController {
         let viewCon = storyB.instantiateViewController(withIdentifier: BucketListTableViewController.identifier) as! BucketListTableViewController
         // 2.5번 present 시 화면 전환 방식 설정(옵션)
         viewCon.modalPresentationStyle = .fullScreen
+        
+        // 값 전달 2번
+        viewCon.textfieldPlaceholder = "드라마"
         
         // 3번
         self.present(viewCon, animated: true)
@@ -57,6 +68,9 @@ class TrendSubTableViewController: UITableViewController {
         
         // 2.5번 코드로 네비게이션 임베드 하는 방법
         let nav = UINavigationController(rootViewController: viewCon)
+        
+        // 값 전달 2번
+        viewCon.textfieldPlaceholder = "도서"
         
         // 2.5번 present 시 화면 전환 방식 설정(옵션)
         nav.modalPresentationStyle = .fullScreen

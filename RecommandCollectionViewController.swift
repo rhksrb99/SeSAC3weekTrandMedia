@@ -19,10 +19,16 @@ import Kingfisher
 class RecommandCollectionViewController: UICollectionViewController {
     static let identifier = "RecommandCollectionViewController"
 
+    // 1. 값 전달(SearchMovieTableViewController) - 데이터를 받을 공간(프로퍼티 생성
+    var movieData:Movie? // 따로 따로 프로퍼티 생성하지 않고 하나의 구조체 전체를 전달 받는 이유? 1. 귀찮아서 2. 깔끔해서
+    
     var image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnwfa7h49F5970bxJrruhRZeQUePhDqK7aw&usqp=CAU"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 3. (SearchMovieTableViewController)전달받은 값 사용 - 프로퍼티 값을 뷰에 표현
+        title = movieData?.title
         
         // 컬렉션뷰의 셀 크기, 셀 사이 간격 등 설정
         let layout = UICollectionViewFlowLayout()

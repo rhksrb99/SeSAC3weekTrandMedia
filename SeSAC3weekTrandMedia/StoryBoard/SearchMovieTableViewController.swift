@@ -15,6 +15,23 @@ class SearchMovieTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "처음으로", style: .plain, target: self, action: #selector(resetButtonClicked))
+        
+    }
+    
+    @objc func resetButtonClicked(){
+        
+        // iOS13 이상 SceneDelegate 쓸 때 동작하는 코드
+        // 앱이 처음 시작하는 것 처럼 화면을 되돌리는 것
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        
+        let storyBoard = UIStoryboard(name: "Trend", bundle: nil)
+        let viewCon = storyBoard.instantiateViewController(withIdentifier: "testViewController") as! testViewController
+        
+        sceneDelegate?.window?.rootViewController = viewCon
+        sceneDelegate?.window?.makeKeyAndVisible()
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,6 +59,13 @@ class SearchMovieTableViewController: UITableViewController {
         
         let sb = UIStoryboard(name: "Search", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: RecommandCollectionViewController.identifier) as! RecommandCollectionViewController
+        
+        // 2. 값 전달(RecommandCollectionViewController) - vc가 가지고있는 프로퍼티에 데이터 추가
+        vc.movieData = movieList.movie[indexPath.row]
+        
+//        let title = movieList.movie[indexPath.row].title
+//        let release = movieList.movie[indexPath.row].releaseDate
+//        vc.title = "\(title)(\(release))"
         
         self.navigationController?.pushViewController(vc, animated: true)
         print("didSelectRowAt second")
