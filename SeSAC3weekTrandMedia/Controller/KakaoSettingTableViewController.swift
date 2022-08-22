@@ -35,25 +35,6 @@ enum settingOptions: Int, CaseIterable{
 }
 
 
-//// 열거형 사용해보기
-//enum allSetting:String {
-//    case notice = "공지사항"
-//    case laboratory = "실험실"
-//    case version = "버전"
-//}
-//
-//enum personalSetting:String{
-//    case privacy = "개인/보안"
-//    case alarm = "알림"
-//    case chat = "채팅"
-//    case profile = "멀티 프로필"
-//}
-//
-//enum etc:String{
-//    case help = "고객센터/도움말"
-//}
-
-
 class KakaoSettingTableViewController: UITableViewController {
    
     

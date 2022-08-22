@@ -15,27 +15,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         // 유저디폴트 이용하기
-        UserDefaults.standard.set(false, forKey: "First") // true이면 View Controller, false이면 SearchMovieTableViewController
+//        UserDefaults.standard.set(false, forKey: "First") // true이면 View Controller, false이면 SearchMovieTableViewController
         
         // 시작화면 지정하는 코드
-        guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
+        guard let _ = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(windowScene: scene)
         
-        if UserDefaults.standard.bool(forKey: "First") {
+//        if UserDefaults.standard.bool(forKey: "First") {
             
-            let storyBoard = UIStoryboard(name: "Trend", bundle: nil)
-            let viewCon = storyBoard.instantiateViewController(withIdentifier: "testViewController") as! testViewController
-            
-            window?.rootViewController = viewCon
-        }else {
-            let storyBoard = UIStoryboard(name: "Search", bundle: nil)
-            let viewCon = storyBoard.instantiateViewController(withIdentifier: "SearchMovieTableViewController") as! SearchMovieTableViewController
-            
-            window?.rootViewController = UINavigationController(rootViewController: viewCon)
-        }
-            
-        // 윈도우에 보이게 하는 코드
-        window?.makeKeyAndVisible()
+//            let storyBoard = UIStoryboard(name: "Trend", bundle: nil)
+//            let viewCon = storyBoard.instantiateViewController(withIdentifier: "testViewController") as! testViewController
+//
+//            window?.rootViewController = viewCon
+//        }else {
+//        let storyBoard = UIStoryboard(name: "Shopping", bundle: nil)
+//        let viewCon = storyBoard.instantiateViewController(withIdentifier: "ShoppingTableViewController") as! ShoppingTableViewController
+        
+//        let vc = ShoppingTableViewController()
+//        let nav = UINavigationController(rootViewController: vc)
+//        window?.rootViewController = nav
+//
+//        // 윈도우에 보이게 하는 코드
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

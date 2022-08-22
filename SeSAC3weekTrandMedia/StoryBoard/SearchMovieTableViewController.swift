@@ -8,13 +8,13 @@
 import UIKit
 
 class SearchMovieTableViewController: UITableViewController {
-
+    
     var movieList = MovieInfo()
-//    ["알라딘", "세얼간이", "짱구는 못말려", "명탐정 코난", "라라랜드", "스파이더맨", "울버린", "아이언맨"]
+    //    ["알라딘", "세얼간이", "짱구는 못말려", "명탐정 코난", "라라랜드", "스파이더맨", "울버린", "아이언맨"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "처음으로", style: .plain, target: self, action: #selector(resetButtonClicked))
         
     }
@@ -63,16 +63,12 @@ class SearchMovieTableViewController: UITableViewController {
         // 2. 값 전달(RecommandCollectionViewController) - vc가 가지고있는 프로퍼티에 데이터 추가
         vc.movieData = movieList.movie[indexPath.row]
         
-//        let title = movieList.movie[indexPath.row].title
-//        let release = movieList.movie[indexPath.row].releaseDate
-//        vc.title = "\(title)(\(release))"
+        //        let title = movieList.movie[indexPath.row].title
+        //        let release = movieList.movie[indexPath.row].releaseDate
+        //        vc.title = "\(title)(\(release))"
         
         self.navigationController?.pushViewController(vc, animated: true)
         print("didSelectRowAt second")
         
-        
     }
-    
-    
-
 }

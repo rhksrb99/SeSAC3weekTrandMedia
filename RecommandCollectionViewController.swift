@@ -75,7 +75,6 @@ class RecommandCollectionViewController: UICollectionViewController {
         
         self.navigationController?.pushViewController(viewController, animated: true)
         
-//        self.navigationController?.popViewController(animated: true)
         
     }
     
