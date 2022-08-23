@@ -10,16 +10,16 @@ import RealmSwift
 
 class UserShoppingList: Object {
     @Persisted var item: String = ""
-    @Persisted var favorite: Bool?
-    @Persisted var check: Bool?
+    @Persisted var favorite: Bool
+    @Persisted var check: Bool
 
     @Persisted(primaryKey: true) var objectID: ObjectId
     
-    convenience init(item:String) {
+    convenience init(item: String, favorite: Bool, check: Bool) {
         self.init()
         self.item = item
-        self.favorite = false
-        self.check = false
+        self.favorite = favorite
+        self.check = check
     }
 }
 

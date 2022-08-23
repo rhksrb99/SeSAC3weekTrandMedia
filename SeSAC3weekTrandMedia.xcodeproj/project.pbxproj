@@ -17,6 +17,7 @@
 		92CA18F728B354B700314DEB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 92CA18F628B354B700314DEB /* Realm */; };
 		92CA18F928B354B700314DEB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92CA18F828B354B700314DEB /* RealmSwift */; };
 		92CA18FC28B3559900314DEB /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA18FB28B3559900314DEB /* DBModel.swift */; };
+		92CA190128B54F4800314DEB /* ShoppingItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA190028B54F4800314DEB /* ShoppingItemDetailViewController.swift */; };
 		92EF7FD92884FE3B00E86749 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF7FD82884FE3B00E86749 /* SettingTableViewController.swift */; };
 		92EF7FDB28850FD400E86749 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EF7FDA28850FD400E86749 /* Setting.storyboard */; };
 		92EF7FDF288526CD00E86749 /* PersonalTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF7FDE288526CD00E86749 /* PersonalTimeTableViewController.swift */; };
@@ -65,6 +66,7 @@
 		9268922D2884DDCB00E88995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		926892332884F11000E88995 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = SOURCE_ROOT; };
 		92CA18FB28B3559900314DEB /* DBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
+		92CA190028B54F4800314DEB /* ShoppingItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemDetailViewController.swift; sourceTree = "<group>"; };
 		92EF7FD82884FE3B00E86749 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		92EF7FDA28850FD400E86749 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		92EF7FDE288526CD00E86749 /* PersonalTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTimeTableViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				92EF7FE82886440500E86749 /* TrendViewController.swift */,
 				92EF804B288A3F9200E86749 /* testViewController.swift */,
 				92EF801D2888E75600E86749 /* TrendSubTableViewController.swift */,
+				92CA190028B54F4800314DEB /* ShoppingItemDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				92EF800C28879DFF00E86749 /* RecommandCollectionViewCell.swift in Sources */,
 				92EF80042887877F00E86749 /* SearchMovieTableViewCell.swift in Sources */,
 				92EF80182887D5BB00E86749 /* BookCollectionViewController.swift in Sources */,
+				92CA190128B54F4800314DEB /* ShoppingItemDetailViewController.swift in Sources */,
 				92EF7FD92884FE3B00E86749 /* SettingTableViewController.swift in Sources */,
 				92EF801E2888E75600E86749 /* TrendSubTableViewController.swift in Sources */,
 				926892242884DDC900E88995 /* ViewController.swift in Sources */,
