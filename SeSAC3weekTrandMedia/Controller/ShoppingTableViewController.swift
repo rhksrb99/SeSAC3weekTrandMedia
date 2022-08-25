@@ -7,12 +7,17 @@
 
 import UIKit
 import RealmSwift
+import Alamofire
+import SwiftyJSON
 
 class ShoppingTableViewController: UITableViewController {
     
 //    var shoppingList = [String]()
     
     let localRealm = try! Realm()
+    
+    var itemsImage:[String] = []
+    
     
     var tasks: Results<UserShoppingList>!{
         didSet{
@@ -32,6 +37,7 @@ class ShoppingTableViewController: UITableViewController {
         tableView.rowHeight = 60
         btnDesign()
         tfDesign()
+        
         
         print("Realm is located at:", localRealm.configuration.fileURL!)
         
@@ -81,12 +87,38 @@ class ShoppingTableViewController: UITableViewController {
         tasks = localRealm.objects(UserShoppingList.self).sorted(byKeyPath: "item", ascending: false)
     }
     
+    func loadItemImage() {
+        guard let item = tf_search.text else {return}
+        
+        let url = "\(Endpoint.unsplashURL)\(item)&client_id=\(APIKey.unsplashKey)"
+        AF.request(url, method: .get).validate().responseData { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print(item)
+//                print("JSON: \(json)")
+                let jsonArray = json["results"].arrayValue
+                for json in jsonArray {
+                    let thumbURL = json["urls"]["thumb"].stringValue
+                    self.itemsImage.append(thumbURL)
+                }
+                print(self.itemsImage)
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
     // MARK: - TableViewController Setting
     @IBAction func btn_searchClicked(_ sender: UIButton) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
         
-        let task = UserShoppingList(item: tf_search.text!, favorite: false, check: false)
+        loadItemImage()
+        
+        // 버튼을 클릭 시 이미지 불러오는 함수가 실행되고 그 속에서
+        // 저장되는 이미지를 넣어주고싶다. 이 부분에서 하는게 맞는건가?
+        let task = UserShoppingList(item: tf_search.text!, favorite: false, check: false, itemImage: "")
         
         try! localRealm.write {
             localRealm.add(task) // create
@@ -94,10 +126,9 @@ class ShoppingTableViewController: UITableViewController {
             dismiss(animated: true)
         }
         
+        
         tf_search.text = ""
         tableView.reloadData()
-//        // 입력받은 값을 배열에 추가
-//        shoppingList.append(tf_search.text!)
     }
     
     @IBAction func btn_favoriteClicked(_ sender: UIButton) {
@@ -130,6 +161,9 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as! ShoppingTableViewCell // 타입 캐스팅
         
+//        let imageURL = URL(string: tasks[indexPath.row].itemImage)
+//        let imageData = try? Data(contentsOf: imageURL!)
+        
         cell.lb_list.text = tasks[indexPath.row].item
         
         cell.lb_list.font = .boldSystemFont(ofSize: 20)
@@ -137,6 +171,7 @@ class ShoppingTableViewController: UITableViewController {
         cell.btn_like.tintColor = .black
         cell.btn_check.tintColor = .black
         cell.layer.cornerRadius = 8
+//        cell.itemImage.image = UIImage(data: imageData!)
         
         if self.tasks[indexPath.row].favorite {
             cell.btn_like.setImage(UIImage(systemName: "star.fill"), for: .normal)
@@ -159,17 +194,16 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print("didSelectRowAt")
-        let sb = UIStoryboard(name: "Shopping", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: ShoppingItemDetailViewController.identifier) as! ShoppingItemDetailViewController
+        
+        let vc = ShoppingItemDetailViewController()
         
         let sendData = tasks[indexPath.row]
-        
+        print(tasks[indexPath.row])
         vc.selectedItem = sendData.item
         vc.selectedCheck = sendData.check
         vc.selectedFavorite = sendData.favorite
         
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     // 삭제를 가능하게 하는 메서드
